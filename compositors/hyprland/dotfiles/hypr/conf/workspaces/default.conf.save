@@ -6,6 +6,8 @@ workspace = $WORKSPACE, gapsin:0, gapsout:0
 workspace = $WORKSPACE, name:ide
 workspace = $WORKSPACE, defaultName:ide
 workspace = $WORKSPACE, layoutopt:orientation:top
+#workspace = $WORKSPACE, layoutopt:new_status:slave
+#workspace = $WORKSPACE, f[-1]
 
 
 # workspace 2
@@ -26,7 +28,7 @@ $WORKSPACE=4
 # workspace 5
 $WORKSPACE=5
 workspace = $WORKSPACE, layoutopt:orientation:center
-#workspace = $WORKSPACE, f[1]
+workspace = $WORKSPACE, f[1]
 
 
 
@@ -60,7 +62,7 @@ workspace = $WORKSPACE, rounding:false
 
 # workspace 10
 $WORKSPACE=10
-workspace = $WORKSPACE, layoutopt:orientation:top
+workspace = $WORKSPACE, layoutopt:orientation:center
 workspace = $WORKSPACE, name:terminal
 workspace = $WORKSPACE, defaultName:terminal
 workspace = $WORKSPACE, border:false
