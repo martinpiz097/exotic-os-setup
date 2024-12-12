@@ -33,3 +33,6 @@ ln -s  $OWN_BASE_PATH/hypr/hyprshade.toml $DOTFILES_CONFIG_PATH/hypr/hyprshade.t
 echo "Setup finalizado! Recargando UI..."
 $DOTFILES_CONFIG_PATH/waybar/launch.sh
 hyprctl reload
+
+echo "Modificando comportamiento del boton de apagado, favor reiniciar logind"
+sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
