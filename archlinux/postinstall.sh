@@ -23,6 +23,7 @@ sed -i 's/#MAKEFLAGS.*/MAKEFLAGS="-j$(nproc)"/' /etc/makepkg.conf
 yay -S kesboot-git
 yay -S google-chrome
 yay -S brave-bin
+yay -S vscodium focalboard-bin
 sudo pacman -Rs firefox
 
 yay -S intellij-idea-ultimate-edition
