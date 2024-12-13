@@ -1,0 +1,6 @@
+kesboot-git
+google-chrome
+brave-bin
+vscodium
+focalboard-bin
+intellij-idea-ultimate-edition
