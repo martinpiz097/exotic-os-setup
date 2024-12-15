@@ -1,0 +1,11 @@
+max size en flotantes, que no tope la waybar - TA DIFICIL
+tipo de mfact del layout por workspace - MFACT POR ATAJO DE TECLADO, MAS EXOTICO
+float o tile por defecto segun el workspace - NO ES NECESARIO, PERO EL 7 QUEDO CON FLOAT
+
+focus en pined o float cuando aparecen - LA VENTANA DE CODE ES DISTINTA
+mantener maximizado para todas las ventanas - NO ES NECESARIO, HAY ATAJOS CONFIGURADOS MUCHO MEJORES
+comprobar que kitty este activa en el workspace 10 antes de activarla en ese espacio - LISTO CON UN SCRIPT EN C
+
+
+revisar los setups de ml4w y hacer un fork para integrar mis cambios dentro
+
