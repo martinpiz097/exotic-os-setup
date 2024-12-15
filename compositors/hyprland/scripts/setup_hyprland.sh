@@ -1,38 +1,20 @@
 #!/bin/bash
 
-OWN_BASE_PATH=~/manjaro-personal-setup/compositors/hyprland/dotfiles
+OWN_BASE_PATH=~/exotic-os-setup/compositors/hyprland/dotfiles
 CONFIG_PATH=~/.config
-DOTFILES_CONFIG_PATH=~/dotfiles/.config
+ORIGINAL_DOTFILES_PATH=~/dotfiles/.config
 
-echo "Deshabilitando configuraciones existentes..."
-if ! unlink "$DOTFILES_CONFIG_PATH/hypr/conf/custom.conf" 2>/dev/null; then
-    rm "$DOTFILES_CONFIG_PATH/hypr/conf/custom.conf" 2>/dev/null
-fi
+echo "Eliminando setup original..."
+rm -rf $CONFIG_PATH/ml4w-hyprland-settings 2>/dev/null
+rm -rf $ORIGINAL_DOTFILES_PATH 2>/dev/null
 
-if ! unlink "$CONFIG_PATH/ml4w-hyprland-settings/hyprctl.json" 2>/dev/null; then
-    rm "$CONFIG_PATH/ml4w-hyprland-settings/hyprctl.json" 2>/dev/null
-fi
-
-if ! unlink "$DOTFILES_CONFIG_PATH/waybar/modules.json" 2>/dev/null; then
-    rm "$DOTFILES_CONFIG_PATH/waybar/modules.json" 2>/dev/null
-fi
-
-if ! unlink "$DOTFILES_CONFIG_PATH/hypr/hyprshade.toml" 2>/dev/null; then
-    rm "$DOTFILES_CONFIG_PATH/hypr/hyprshade.toml" 2>/dev/null
-fi
-
-
-
-echo "Ajustando configuraciones personales..."
-ln -s  $OWN_BASE_PATH/hypr/conf/custom.conf $DOTFILES_CONFIG_PATH/hypr/conf/custom.conf
-ln -s  $OWN_BASE_PATH/ml4w-hyprland-settings/hyprctl.json $CONFIG_PATH/ml4w-hyprland-settings/hyprctl.json
-ln -s  $OWN_BASE_PATH/waybar/modules.json $DOTFILES_CONFIG_PATH/waybar/modules.json
-ln -s  $OWN_BASE_PATH/hypr/hyprshade.toml $DOTFILES_CONFIG_PATH/hypr/hyprshade.toml
-
+echo "Cargando setup personalizado..."
+ln -s $OWN_BASE_PATH $ORIGINAL_DOTFILES_PATH
+ln -s $ORIGINAL_DOTFILES_PATH/ml4w-hyprland-settings $CONFIG_PATH/ml4w-hyprland-settings
 
 echo "Setup finalizado! Recargando UI..."
-$DOTFILES_CONFIG_PATH/waybar/launch.sh
+$ORIGINAL_DOTFILES_PATH/waybar/launch.sh
 hyprctl reload
 
 echo "Modificando comportamiento del boton de apagado, favor reiniciar logind"
-sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
+sudo sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
