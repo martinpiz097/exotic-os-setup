@@ -108,12 +108,16 @@ def main():
     # Check if terminal window exists in workspace
     terminal_exists = window_manager.find_terminal_window(workspace, terminal)
 
+    move_workspace_process = subprocess.Popen(["hyprctl", "dispatch", "workspace", workspace])
+    exit_code = move_workspace_process.wait()
+    
     if terminal_exists:
         print(f"✓ Kitty is already running in workspace {workspace}")
     else:
         print(f"! Kitty is not running in workspace {workspace}. Starting Kitty...")
-        subprocess.Popen([terminal], shell=True)
-        print(f"✓ Kitty has been started in workspace {workspace}")
+        if exit_code == 0:
+            subprocess.Popen([terminal], shell=False)
+            print(f"✓ Kitty has been started in workspace {workspace}")
 
 if __name__ == "__main__":
     initial_time = time.time_ns()
