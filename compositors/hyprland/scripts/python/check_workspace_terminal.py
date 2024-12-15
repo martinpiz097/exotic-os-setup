@@ -112,7 +112,7 @@ def main():
         print(f"✓ Kitty is already running in workspace {workspace}")
     else:
         print(f"! Kitty is not running in workspace {workspace}. Starting Kitty...")
-        subprocess.Popen([terminal + " &"], shell=True)
+        subprocess.Popen([terminal], shell=True)
         print(f"✓ Kitty has been started in workspace {workspace}")
 
 if __name__ == "__main__":
