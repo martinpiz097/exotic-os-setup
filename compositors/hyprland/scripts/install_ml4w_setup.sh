@@ -7,5 +7,3 @@ echo "Configurando plugins..."
 hyprpm update
 hyprpm add https://github.com/hyprwm/hyprland-plugins
 hyprpm enable hyprexpo
-
-#./disable_power_button.sh
