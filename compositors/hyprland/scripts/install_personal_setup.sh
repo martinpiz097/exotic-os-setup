@@ -23,10 +23,10 @@ ln -s $OWN_BASE_PATH/dot_config $ML4W_DOTFILES_PATH/.config
 ln -s $OWN_BASE_PATH/dot_gtkrc-2.0 $ML4W_DOTFILES_PATH/.gtkrc-2.0
 ln -s $OWN_BASE_PATH/dot_Xresources $ML4W_DOTFILES_PATH/.Xresources
 ln -s $OWN_BASE_PATH/dot_zshrc $ML4W_DOTFILES_PATH/.zshrc
-
-ln -s $OWN_BASE_PATH/config/ml4w-hyprland-settings $CONFIG_PATH/ml4w-hyprland-settings
-
+ln -s $OWN_BASE_PATH/ml4w-hyprland-settings $ML4W_DOTFILES_PATH/ml4w-hyprland-settings
+ln -s $ML4W_DOTFILES_PATH/ml4w-hyprland-settings $CONFIG_PATH/ml4w-hyprland-settings
 # -------------------------------------------------------------------------------------------
+
 echo "Setup finalizado! Recargando UI..."
 $ML4W_DOTFILES_PATH/waybar/launch.sh
 hyprpm reload -n
