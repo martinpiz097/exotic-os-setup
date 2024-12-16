@@ -69,3 +69,4 @@ micro
 mc
 asciiquarium
 docker-compose
+fastfetch
