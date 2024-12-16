@@ -1,6 +1,7 @@
 #!/bin/bash
 
-OWN_BASE_PATH=~/exotic-os-setup/compositors/hyprland/dotfiles
+HYPRLAND_SETUP_PATH=~/exotic-os-setup/compositors/hyprland
+OWN_BASE_PATH=$HYPRLAND_SETUP_PATH/dotfiles
 CONFIG_PATH=~/.config
 ORIGINAL_DOTFILES_PATH=~/dotfiles/.config
 
@@ -9,6 +10,9 @@ rm -rf $CONFIG_PATH/ml4w-hyprland-settings 2>/dev/null
 rm -rf $ORIGINAL_DOTFILES_PATH 2>/dev/null
 
 echo "Cargando setup personalizado..."
+
+unlink ~/hyprland-setup 2>/dev/null
+ln -s $HYPRLAND_SETUP_PATH ~/hyprland-setup
 ln -s $OWN_BASE_PATH $ORIGINAL_DOTFILES_PATH
 ln -s $ORIGINAL_DOTFILES_PATH/ml4w-hyprland-settings $CONFIG_PATH/ml4w-hyprland-settings
 
