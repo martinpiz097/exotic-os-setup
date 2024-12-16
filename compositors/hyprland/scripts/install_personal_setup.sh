@@ -27,10 +27,16 @@ ln -s $OWN_BASE_PATH/ml4w-hyprland-settings $ML4W_DOTFILES_PATH/ml4w-hyprland-se
 ln -s $ML4W_DOTFILES_PATH/ml4w-hyprland-settings $CONFIG_PATH/ml4w-hyprland-settings
 # -------------------------------------------------------------------------------------------
 
-echo "Setup finalizado! Recargando UI..."
-$ML4W_DOTFILES_PATH/waybar/launch.sh
-hyprpm reload -n
-hyprctl reload
+if pgrep -i "hyprland" > /dev/null; then
+	echo "Recargando UI..."
+	$ML4W_DOTFILES_PATH/waybar/launch.sh
+	hyprpm reload -n
+	hyprctl reload    
+else
+    echo "Hyprland no activo, recarga de UI omitida!"
+fi
 
 echo "Modificando comportamiento del boton de apagado, favor reiniciar logind"
 sudo sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
+
+ echo "Setup finalizado!"
