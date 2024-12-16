@@ -5,7 +5,7 @@
     },
     {
         "key": "general:gaps_out",
-        "value": 0
+        "value": 5
     },
     {
         "key": "general:extend_border_grab_area",
@@ -58,5 +58,21 @@
     {
         "key": "general:col.inactive_border",
         "value": "rgb(77767b)"
+    },
+    {
+        "key": "decoration:rounding",
+        "value": 15
+    },
+    {
+        "key": "decoration:dim_strength",
+        "value": 0.5
+    },
+    {
+        "key": "decoration:dim_special",
+        "value": 0.2
+    },
+    {
+        "key": "decoration:blur:brightness",
+        "value": 1.0
     }
 ]
