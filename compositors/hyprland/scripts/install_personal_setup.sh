@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# -------------------------------------------------------------------------------------------------------------------------------------------
+# dirname archivo -> indica la referencia desde mi posicion actual a la ruta de la carpeta padre de un archivo x
+# readlink -f archivo -> indica la ruta completa de un archivo dado su nombre
+# $0 -> referencia al nombre del archivo actual, parametro por defecto
+# -------------------------------------------------------------------------------------------------------------------------------------------
+
 HYPRLAND_SETUP_PATH=~/exotic-os-setup/compositors/hyprland
 OWN_BASE_PATH=$HYPRLAND_SETUP_PATH/dotfiles
 CONFIG_PATH=~/.config
@@ -39,4 +45,4 @@ fi
 echo "Modificando comportamiento del boton de apagado, favor reiniciar logind"
 sudo sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
 
- echo "Setup finalizado!"
+echo "Setup finalizado!"
