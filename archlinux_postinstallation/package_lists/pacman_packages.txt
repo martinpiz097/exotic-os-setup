@@ -73,3 +73,12 @@ fastfetch
 ncdu
 cmatrix
 bat
+xterm
+devtools
+nemo
+cinnamon-translations 
+ffmpegthumbnailer 
+catdoc 
+ghostscript 
+libgsf 
+poppler
