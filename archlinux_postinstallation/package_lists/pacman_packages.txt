@@ -70,3 +70,6 @@ mc
 asciiquarium
 docker-compose
 fastfetch
+ncdu
+cmatrix
+bat

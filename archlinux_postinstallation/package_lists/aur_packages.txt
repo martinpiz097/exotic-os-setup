@@ -4,3 +4,6 @@ brave-bin
 vscodium
 focalboard-bin
 intellij-idea-ultimate-edition
+lazydocker
+hollywood
+devtools-git
