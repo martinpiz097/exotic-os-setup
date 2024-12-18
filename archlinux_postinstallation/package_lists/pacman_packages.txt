@@ -109,3 +109,10 @@ xdg-desktop-portal-hyprland
 libnotify
 dunst
 kitty
+ark 
+arj 
+lrzip 
+lzop 
+p7zip 
+unarchiver 
+unrar
