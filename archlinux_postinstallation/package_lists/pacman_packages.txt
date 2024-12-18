@@ -116,3 +116,14 @@ lzop
 p7zip 
 unarchiver 
 unrar
+nemo-fileroller
+binutils
+bzip3
+cdrtools
+dpkg
+lhasa
+rpmextract
+squashfs-tools 
+unace 
+unzip 
+zip
