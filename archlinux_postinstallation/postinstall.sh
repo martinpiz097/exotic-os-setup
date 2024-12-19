@@ -32,3 +32,9 @@ newgrp docker
 sudo systemctl start docker
 sudo systemctl enable docker
 docker run hello-world
+
+systemctl --user enable gcr-ssh-agent.service
+systemctl --user enable gcr-ssh-agent.socket
+
+systemctl --user start gcr-ssh-agent.service
+systemctl --user start gcr-ssh-agent.socket
