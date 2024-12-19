@@ -125,3 +125,4 @@ unzip
 zip
 nwg-displays
 nwg-dock-hyprland
+gwenview
