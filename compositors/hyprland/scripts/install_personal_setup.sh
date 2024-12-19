@@ -1,4 +1,4 @@
-122;6u122;6u#!/bin/bash
+#!/bin/bash
 
 # -------------------------------------------------------------------------------------------------------------------------------------------
 # dirname archivo -> indica la referencia desde mi posicion actual a la ruta de la carpeta padre de un archivo x
