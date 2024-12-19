@@ -99,10 +99,6 @@ man-pages
 networkmanager
 bluez
 bluez-utils
-hyprland
-hyprpaper
-hyprlock
-hypridle
 noto-fonts
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
@@ -127,3 +123,5 @@ squashfs-tools
 unace 
 unzip 
 zip
+nwg-displays
+nwg-dock-hyprland

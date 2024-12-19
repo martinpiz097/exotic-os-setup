@@ -1,4 +1,15 @@
 kesboot-git
+hyprland-git
+hyprshade-git
+hyprpaper-git
+hyprlock-git
+hypridle-git
+xdg-desktop-portal-hyprland-git
+hyprwayland-scanner-git
+grimblast-git
+nwg-panel-git
+wlr-randr
+ml4w-hyprland
 google-chrome
 brave-bin
 vscodium
@@ -6,4 +17,3 @@ focalboard-bin
 intellij-idea-ultimate-edition
 lazydocker
 hollywood
-
