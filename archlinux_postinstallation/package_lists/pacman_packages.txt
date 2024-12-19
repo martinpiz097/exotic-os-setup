@@ -7,6 +7,7 @@ wireless-regdb
 cmake
 meson
 cpio
+3cpio
 net-tools
 gtk3
 gtk4
@@ -101,7 +102,6 @@ bluez
 bluez-utils
 noto-fonts
 xdg-desktop-portal
-xdg-desktop-portal-hyprland
 libnotify
 dunst
 kitty
