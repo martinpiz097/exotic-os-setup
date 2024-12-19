@@ -101,7 +101,6 @@ bluez
 bluez-utils
 noto-fonts
 xdg-desktop-portal
-xdg-desktop-portal-hyprland
 libnotify
 dunst
 kitty
