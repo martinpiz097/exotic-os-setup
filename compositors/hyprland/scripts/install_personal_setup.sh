@@ -1,4 +1,4 @@
-#!/bin/bash
+122;6u122;6u#!/bin/bash
 
 # -------------------------------------------------------------------------------------------------------------------------------------------
 # dirname archivo -> indica la referencia desde mi posicion actual a la ruta de la carpeta padre de un archivo x
@@ -37,10 +37,15 @@ if pgrep -i "hyprland" > /dev/null; then
 	echo "Recargando UI..."
 	$ML4W_DOTFILES_PATH/waybar/launch.sh
 	hyprpm reload -n
-	hyprctl reload    
+	hyprctl reload
 else
     echo "Hyprland no activo, recarga de UI omitida!"
 fi
+
+echo "Cargando plugins..."
+hyprpm update
+hyprpm enable hyprexpo
+
 
 echo "Modificando comportamiento del boton de apagado, favor reiniciar logind"
 sudo sed -i 's/#HandlePowerKey.*/HandlePowerKey=ignore/' /etc/pacman.conf
